@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style for navigation bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        /* Style for scrolling images */
+        .scrolling-images {
+            /* Add your styling for scrolling images */
+        }
+
+        /* Style for main content area */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Add more styles as needed */
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link,
+        .login-link {
+            text-align: center;
+        }
+
+        .signup-link a,
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover,
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo image -->
+            <h1>Website Name</h1> <!-- Replace with your website name -->
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop Art</a></li>
+            <li><a href="#">Gallery Wall</a></li>
+            <li><a href="#">Personalized Art</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Account</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="main-content">
+        <div class="container">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="signup-link">
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrolling Images -->
+    <div class="scrolling-images">
+        <!-- Add your scrolling images here -->
+    </div>
+</body>
+</html>

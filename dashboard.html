@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Groove Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome icons -->
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style for navigation bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+            position: relative; /* Add position relative */
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .nav-links li a:hover {
+            background-color: #555;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative; /* Change position to relative */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position below the parent link */
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            width: 150px; /* Adjust as needed */
+            z-index: 1; /* Ensure it appears above other elements */
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        /* Style for category section */
+        .categories {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .category-link {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .category-link:hover {
+            background-color: #ddd;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            text-align: center;
+        }
+
+        .product img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Garden Groove Logo">
+            <h1>Garden Groove</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Plants</a>
+                <div class="dropdown-content">
+                    <a href="#">Flowering Plants</a>
+                    <a href="#">Succulents</a>
+                    <a href="#">Ferns</a>
+                    <a href="#">Cacti</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Account</a>
+                <div class="dropdown-content">
+                    <a href="#">Cart</a>
+                    <a href="#" onclick="logout()">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Main content area -->
+    <div class="main-content">
+        <h2>Welcome to Garden Groove!</h2>
+        
+        <!-- Category Section -->
+        <div class="categories">
+            <a href="#" class="category-link">Home Decor</a>
+            <a href="#" class="category-link">Indoor Plants</a>
+            <a href="#" class="category-link">Outdoor Plants</a>
+            <a href="#" class="category-link">Pots</a>
+        </div>
+
+        <!-- Product Section -->
+        <h2>Featured Products</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1 Name</h3>
+                <p>$50.00</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2 Name</h3>
+                <p>$35.00</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <h3>Product 3 Name</h3>
+                <p>$20.00</p>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="product4.jpg" alt="Product 4">
+                <h3>Product 4 Name</h3>
+                <p>$45.00</p>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="product5.jpg" alt="Product 5">
+                <h3>Product 5 Name</h3>
+                <p>$60.00</p>
+            </div>
+            <!-- Product 6 -->
+            <div class="product">
+                <img src="product6.jpg" alt="Product 6">
+                <h3>Product 6 Name</h3>
+                <p>$25.00</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Logout function
+        function logout() {
+            // Redirect to the login page
+            window.location.href = "login.html";
+        }
+
+        // Show dropdown menu when hovering over account link
+        document.querySelector('.dropdown').addEventListener('mouseover', function() {
+            this.querySelector('.dropdown-content').style.display = 'block';
+        });
+
+        // Hide dropdown menu when not hovering over account link
+        document.querySelector('.dropdown').addEventListener('mouseout', function() {
+            this.querySelector('.dropdown-content').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
